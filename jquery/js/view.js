@@ -53,12 +53,13 @@ View.prototype.exercise4 = function () {
   let $squares = $('.square');
   for (var i = 0; i < $squares.length; i++) {
     if (i%2 === 0) {
-      console.log('even');
-      $squares[i].html = 'Allen';
-    } else {
-      console.log('odd');
+      $squares[i].innerHTML = 'Odd';
     }
   }
+  $squares.css('font-family', 'sans-serif');
+  $squares.css('color', 'blue');
+  $squares.css('font-size', '10px');
+  $squares.css('text-align', 'center');
 };
 
 View.prototype.exercise5 = function () {
