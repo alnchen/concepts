@@ -15,7 +15,9 @@ View.prototype.exercise0 = function () {
   //just a list of dots
 
   //this one completed as an example :) no additional code necessary
-  $('li').removeClass("square");
+  $('li').addClass("square");
+  $('.square').removeClass("orange");
+  // $('.square').css("background-color", 'white');
 };
 
 View.prototype.exercise1 = function () {
@@ -39,7 +41,8 @@ View.prototype.exercise3 = function () {
   //Result: An <h1> with the text 'i love jquery' appears under the grid.
 
   //your code here!
-
+  const $h1 = $("<h1>").html('i love jquery');
+  $('#easel').append($h1);
 };
 
 View.prototype.exercise4 = function () {
@@ -47,6 +50,15 @@ View.prototype.exercise4 = function () {
   //Result: Your name appears in every other square.
 
   //your code here!
+  let $squares = $('.square');
+  for (var i = 0; i < $squares.length; i++) {
+    if (i%2 === 0) {
+      console.log('even');
+      $squares[i].html = 'Allen';
+    } else {
+      console.log('odd');
+    }
+  }
 };
 
 View.prototype.exercise5 = function () {
