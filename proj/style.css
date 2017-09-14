@@ -1,0 +1,31 @@
+.app {
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.box {
+  width: 100vw;
+  color: blue;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-around;
+}
+
+.select {
+  width: 100px;
+}
+
+#body {
+  background-color: grey;
+}
+
+#map {
+  width: 100vw;
+  height: 400px;
+}
