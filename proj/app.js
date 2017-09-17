@@ -4,7 +4,7 @@ var baseImageURL = 'http://images.trvl-media.com';
 function initMap() {
   var uluru = {lat: 37.925345, lng: -122.37899};
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 8,
+    zoom: 9,
     center: uluru
   });
 
@@ -15,10 +15,35 @@ function initMap() {
       position: {lat: hotelLat, lng: hotelLng},
       map: map
     });
-    var detail = document.createElement("div");
-   detail.innerHTML = hotel['propertyName'];
-   document.lastChild.appendChild(detail);
-   });
+
+    var infowindow = new google.maps.InfoWindow({
+      content: hotel['propertyName']
+    });
+
+    marker.addListener('mouseover', function() {
+      infowindow.open(map, marker);
+    });
+
+    marker.addListener('mouseout', function() {
+      infowindow.close();
+    });
+
+    marker.addListener('click', function() {
+      var myNode = document.getElementsByClassName("detail");
+      for (var i = 0; i < myNode.length; i++) {
+        myNode[i].remove();
+      }
+
+      var detail = document.createElement("div");
+      detail.classList.add('detail');
+      detail.innerHTML = hotel['propertyName'] + ' --- ' + hotel['price'] + ' per night';
+      var elem = document.createElement("img");
+      elem.src = 'http://images.trvl-media.com' + hotel['image']['large'];
+      elem.classList.add('photo')
+      detail.appendChild(elem);
+      document.lastChild.appendChild(detail);
+      });
+    });
 }
 
   /*
