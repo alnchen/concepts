@@ -4,22 +4,46 @@ class SearchBar extends React.Component {
   constructor() {
     super();
     this.state = {
-      character: ''
+      search: '',
+      gifs: []
     };
-    this.handleChracterSubmit = this.handleChracterSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleInput = this.handleInput.bind(this);
   }
 
-  handleChracterSubmit(e) {
+  handleInput(e) {
+    e.preventDefault();
+    this.setState({
+      search: e.currentTarget.value
+    });
+  }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    var api = 'u8RD2rgLMN3gsbh26KWPetraRkAvjCj7',
+        q = "'kobe'",
+        data = [];
+
+    // $.ajax({
+    //     url: "https://www.api.giphy.com/v1/gifs/trending",
+    //     dataType:'json',
+    //     type: 'GET',
+    //     success:function(response){
+    //           console.log('success');
+    //     }
+    // });
+
+    fetch(`https://api.giphy.com/v1/gifs/search?api_key=u8RD2rgLMN3gsbh26KWPetraRkAvjCj7&q=${this.state.search}&limit=5`)
+    .then((res) => console.log(res.json()));
   }
 
   render() {
     return (
       <span id='searchbar'>
         <form>
-          <label>Name of Character:</label>
-          <input type='text'></input>
-          <button onClick={this.handleChracterSubmit}>Find</button>
+          <label>Find Gifs:</label>
+          <input type='text' onChange={this.handleInput}></input>
+          <button onClick={this.handleSubmit}>Find</button>
         </form>
       </span>
     );
