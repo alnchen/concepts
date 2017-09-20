@@ -1,0 +1,63 @@
+#options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+#options > button {
+  font-size: 1vw;
+  font-family: sans-serif;
+  background-color: white;
+  width: 8vw;
+  height: auto;
+  border: 2px solid gray;
+  margin: 2px;
+}
+
+#seconds, #minutes {
+  font-family: sans-serif;
+  font-size: 12vw;
+  color: #15FF16;
+  display: block;
+  width: 45%;
+  text-align: center;
+  /*background-color: red;*/
+  /*border: 2px double white;*/
+}
+
+#button {
+  font-family: sans-serif;
+  font-size: 16px;
+  height: 30px;
+  width: 50%;
+  display: block;
+}
+
+#buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#stopwatch {
+  margin: 0 auto;
+  width: 40vw;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 8px solid gray;
+  border-radius: 10px;
+}
+
+#tick {
+  width: 10%;
+  color: #15FF16;
+  font-family: sans-serif;
+  font-size: 11vw;
+  text-align: center;
+}
+
+body {
+  background-color: brown;
+}

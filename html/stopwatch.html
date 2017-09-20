@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stopwatch</title>
+    <script src='app.js'></script>
+    <link rel='stylesheet' href='style.css' />
+  </head>
+  <body>
+    <div id='options'>
+      <button onClick="setTime('00','05')">5 Seconds</button>
+      <button onClick="setTime('00','15')">15 Seconds</button>
+      <button onClick="setTime('00','30')">30 Seconds</button>
+      <button onClick="setTime('01','00')">1 Minute</button>
+      <button onClick="setTime('05','00')">5 Minutes</button>
+    </div>
+    <div id='stopwatch'>
+      <div id='minutes'></div>
+      <div id='tick'>:</div>
+      <div id='seconds'></div>
+      <div id='buttons'>
+        <button id='button' onclick="countdown()">Start</button>
+        <button id='button' onClick='pause()'>Pause</button>
+      </div>
+    </div>
+  </body>
+</html>
