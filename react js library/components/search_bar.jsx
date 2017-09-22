@@ -1,4 +1,5 @@
 import React from 'react';
+import {Widget} from './widget';
 
 class SearchBar extends React.Component {
   constructor() {
@@ -9,6 +10,11 @@ class SearchBar extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
+    this.addWidget = this.addWidget.bind(this);
+  }
+
+  addWidget() {
+
   }
 
   handleInput(e) {
@@ -39,13 +45,14 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <span id='searchbar'>
+      <div className='search_bar'>
         <form>
-          <label>Find Gifs:</label>
+          <label className='search_label'>Find Gifs:</label>
           <input type='text' onChange={this.handleInput}></input>
           <button onClick={this.handleSubmit}>Find</button>
         </form>
-      </span>
+        <button onClick={this.addWidget}>Add Widget</button>
+      </div>
     );
   }
 }

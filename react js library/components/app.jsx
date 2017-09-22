@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchBar from './search_bar';
-
+import {Widget} from './widget';
 
 class App extends React.Component {
   constructor() {
@@ -10,7 +10,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <SearchBar />
+      <div>
+        <SearchBar />
+        <Widget />
+      </div>
     );
   }
 }

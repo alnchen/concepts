@@ -1,0 +1,21 @@
+.widget {
+  color: yellow;
+  background-color: black;
+}
+
+.search_label {
+  color: purple;
+}
+
+.search_bar {
+  /*width: 50vw;
+  height: 10vh;
+  background-color: brown;*/
+}
+
+.option {
+  width: 100px;
+  height: 20px;
+  color: gold;
+  background-color: purple;
+}
