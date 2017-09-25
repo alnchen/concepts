@@ -30,15 +30,6 @@ class SearchBar extends React.Component {
         q = "'kobe'",
         data = [];
 
-    // $.ajax({
-    //     url: "https://www.api.giphy.com/v1/gifs/trending",
-    //     dataType:'json',
-    //     type: 'GET',
-    //     success:function(response){
-    //           console.log('success');
-    //     }
-    // });
-
     fetch(`https://api.giphy.com/v1/gifs/search?api_key=u8RD2rgLMN3gsbh26KWPetraRkAvjCj7&q=${this.state.search}&limit=5`)
     .then((res) => console.log(res.json()));
   }
