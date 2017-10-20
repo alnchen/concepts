@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>require.js testing</title>
+    <script src='node_modules/systemjs/dist/system.js'></script>
+    <script src='node_modules/traceur/bin/traceur.js'></script>
+  </head>
+  <body>
+    <h1>My Favorite Movies</h1>
+    <div id="movies"></div>
+    <script>
+      System.config({
+        'meta': {
+          './js/*.js': {
+            format: 'esm'
+          }
+        }
+      })
+      System.import('./app.js');
+    </script>
+  </body>
+</html>
